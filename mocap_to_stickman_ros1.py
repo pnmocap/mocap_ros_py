@@ -75,7 +75,7 @@ def asix_2_ros_translation(x, y, z):
     return (z, x, y)
 
 def asix_2_ros_rotation(x, y, z, w):
-    return (z, x, y, -w)
+    return (z, x, y, w)
 
 def mocap_to_stickman_ros1():
     # init ros node

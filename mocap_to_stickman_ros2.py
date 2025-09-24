@@ -110,7 +110,7 @@ def mocap_to_stickman_ros2():
                         t.transform.rotation.x = pose_data[3]
                         t.transform.rotation.y = pose_data[4]
                         t.transform.rotation.z = pose_data[5]
-                        t.transform.rotation.w = -pose_data[6]
+                        t.transform.rotation.w = pose_data[6]
                         br.sendTransform(t)
                     
                   # publish
@@ -129,7 +129,7 @@ def mocap_to_stickman_ros2():
                   t.transform.rotation.x = real_time_data["root_rot_x"]
                   t.transform.rotation.y = real_time_data["root_rot_y"]
                   t.transform.rotation.z = real_time_data["root_rot_z"]
-                  t.transform.rotation.w = -real_time_data["root_rot_w"]
+                  t.transform.rotation.w = real_time_data["root_rot_w"]
                   br.sendTransform(t)
               
               elif evt.event_type == MCPEventType.RigidBodyUpdated:
